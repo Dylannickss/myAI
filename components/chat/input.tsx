@@ -1,20 +1,3 @@
-"use client";
-
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { ArrowUp } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import ChatFooter from "@/components/chat/footer";
-
-interface ChatInputProps {
-  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  input: string;
-  isLoading: boolean;
-}
-
 export default function ChatInput({
   handleInputChange,
   handleSubmit,
@@ -30,8 +13,10 @@ export default function ChatInput({
 
   return (
     <>
-      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 pb-16 bg-gradient-to-r from-green-500 to-green-700 text-white text-base">
-        {/* Extra bottom padding ensures highlight is fully visible */}
+      {/* Container for Chat Input */}
+      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 pb-6 bg-gradient-to-r from-green-500 to-green-700 text-white text-base shadow-lg">
+        
+        {/* Input Box */}
         <div className="max-w-screen-lg w-full">
           <Form {...form}>
             <form
@@ -50,7 +35,7 @@ export default function ChatInput({
                         {...field}
                         onChange={handleInputChange}
                         value={input}
-                        className="border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent text-white"
+                        className="border-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 bg-transparent text-white"
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                         placeholder="Type your message here..."
@@ -71,9 +56,8 @@ export default function ChatInput({
         </div>
       </div>
 
-      {/* Add padding-bottom to push footer down */}
-      <div className="pb-24"></div>
-
+      {/* Footer is now separate from the chat input */}
+      <div className="pb-20"></div> {/* Ensures footer has space */}
       <ChatFooter />
     </>
   );
