@@ -29,11 +29,12 @@ export default function ChatInput({
   });
 
   return (
-    <>
+    <div className="w-full">
+      {/* Push content up to prevent overlap */}
+      <div className="pb-24"></div>
+
       {/* Chat Input Container */}
-      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 pb-6 bg-gradient-to-r from-green-500 to-green-700 text-white text-base">
-        
-        {/* Input Box */}
+      <div className="z-10 flex flex-col justify-center items-center fixed bottom-14 w-full p-5 bg-gradient-to-r from-green-500 to-green-700 text-white text-base">
         <div className="max-w-screen-lg w-full">
           <Form {...form}>
             <form
@@ -73,9 +74,10 @@ export default function ChatInput({
         </div>
       </div>
 
-      {/* Footer & Padding Fix */}
-      <div className="pb-20"></div> {/* Extra space to ensure footer visibility */}
-      <ChatFooter />
-    </>
+      {/* Footer: Now Positioned Below the Input */}
+      <div className="fixed bottom-0 w-full bg-gradient-to-r from-green-600 to-green-800 text-white p-4 text-center">
+        <ChatFooter />
+      </div>
+    </div>
   );
 }
