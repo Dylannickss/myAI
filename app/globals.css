@@ -1,4 +1,98 @@
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure full height for body and HTML */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+}
+
+/* Chat container or main layout fix */
+.chat-container {
+  @apply flex-grow min-h-screen;
+}
+
+/* Utility class for balanced text wrapping */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 60 45% 86%;
+    --foreground: 0 0% 98%;
+    --card: 152 91% 21%;
+    --card-foreground: 152 91% 21%;
+    --popover: 152 91% 21%;
+    --popover-foreground: 152 91% 21%;
+    --primary: 152 91% 21%;
+    --primary-foreground: 152 91% 21%;
+    --secondary: 152 91% 21%;
+    --secondary-foreground: 152 91% 21%;
+    --muted: 152 91% 21%;
+    --muted-foreground: 152 91% 21%;
+    --accent: 152 91% 21%;
+    --accent-foreground: 152 91% 21%;
+    --destructive: 152 91% 21%;
+    --destructive-foreground: 152 91% 21%;
+    --border: 152 91% 21%;
+    --input: 152 91% 21%;
+    --ring: 152 91% 21%;
+    --chart-1: 152 91% 21%;
+    --chart-2: 152 91% 21%;
+    --chart-3: 152 91% 21%;
+    --chart-4: 152 91% 21%;
+    --chart-5: 152 91% 21%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 60 45% 86%;
+    --foreground: 0 0% 98%;
+    --card: 152 91% 21%;
+    --card-foreground: 152 91% 21%;
+    --popover: 152 91% 21%;
+    --popover-foreground: 152 91% 21%;
+    --primary: 152 91% 21%;
+    --primary-foreground: 152 91% 21%;
+    --secondary: 152 91% 21%;
+    --secondary-foreground: 152 91% 21%;
+    --muted: 152 91% 21%;
+    --muted-foreground: 152 91% 21%;
+    --accent: 152 91% 21%;
+    --accent-foreground: 152 91% 21%;
+    --destructive: 152 91% 21%;
+    --destructive-foreground: 152 91% 21%;
+    --border: 152 91% 21%;
+    --input: 152 91% 21%;
+    --ring: 152 91% 21%;
+    --chart-1: 152 91% 21%;
+    --chart-2: 152 91% 21%;
+    --chart-3: 152 91% 21%;
+    --chart-4: 152 91% 21%;
+    --chart-5: 152 91% 21%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/*@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -76,3 +170,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+*/
