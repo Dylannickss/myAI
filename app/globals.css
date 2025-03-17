@@ -15,15 +15,15 @@ body {
 @layer base {
   :root {
     --background: 60 45% 86%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 60 45% 86%;
     --card: 152 91% 21%;
     --card-foreground: 0 0% 3.9%;
-    --popover: 152, 91%, 21%;
-    --popover-foreground: 152, 91%, 21%;
-    --primary: 152, 91%, 21%;
-    --primary-foreground: 152, 91%, 21%;
-    --secondary: 152, 91%, 21%%;
-    --secondary-foreground: 152, 91%, 21%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
