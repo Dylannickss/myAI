@@ -19,7 +19,8 @@ export default function ChatHeader({
   return (
     /*<div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-green-500 shadow-[0_10px_15px_-3px_rgba(255,255,255,1)]">*/
     /*<div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-[#056839] shadow-lg border-b border-[#034d2a]">*/
-    <div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-gradient-to-l from-[#048d4b] to-[#056839] text-white shadow-lg border-b border-[#034d2a]">
+    <div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-gradient-to-l from-green-500 to-green-700 text-white shadow-lg border-b border-green-800">
+
 
 
       <div className="flex w-full">
