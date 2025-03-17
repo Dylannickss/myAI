@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ChatFooter() {
   return (
-    <div className="w-full text-xs flex justify-between items-center p-4 bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg border-t border-green-800">
+    <footer className="w-full text-xs flex justify-between items-center p-4 bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg border-t border-green-800">
       {/* Left Pane */}
       <div className="flex-grow text-left">
         <Link href="/terms" className="hover:underline text-white font-semibold">
@@ -13,7 +13,7 @@ export default function ChatFooter() {
 
       {/* Center Pane */}
       <div className="flex-grow text-center font-bold tracking-wide">
-        {FOOTER_MESSAGE}
+        {FOOTER_MESSAGE || "© 2024 Plant Parenthood LLC"}
       </div>
 
       {/* Right Pane */}
@@ -27,9 +27,10 @@ export default function ChatFooter() {
           powered by ringel.AI
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
+
 
 /*export default function ChatFooter() {
   return (
