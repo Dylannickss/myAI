@@ -27,7 +27,7 @@ export default function ChatHeader({
         <div className="flex-0 w-[100px] flex justify-end items-center">
           <Button
             onClick={clearMessages}
-            className="gap-2 shadow-sm bg-red-500 text-white hover:bg-red-600"
+            className="gap-2 shadow-sm bg-white text-black hover:bg-gray-200"
             variant="outline"
             size="sm"
           >
