@@ -30,13 +30,12 @@ export default function ChatInput({
 
   return (
     <>
-      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg text-base">
-
+      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 bg-gradient-to-r from-green-500 to-green-700 text-white text-base">
         <div className="max-w-screen-lg w-full">
           <Form {...form}>
             <form
               onSubmit={handleSubmit}
-              className={`flex-0 flex w-full p-1 border rounded-full shadow-sm ${
+              className={`flex-0 flex w-full p-1 border rounded-full shadow-sm mb-4 ${
                 isFocused ? "ring-2 ring-ring ring-offset-2" : ""
               }`}
             >
@@ -69,7 +68,9 @@ export default function ChatInput({
             </form>
           </Form>
         </div>
-        <ChatFooter />
+        <div className="mt-2 w-full">
+          <ChatFooter />
+        </div>
       </div>
     </>
   );
