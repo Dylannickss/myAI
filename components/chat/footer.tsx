@@ -3,7 +3,7 @@ import { FOOTER_MESSAGE } from "@/configuration/ui"; // Ensure this import is co
 
 export default function ChatFooter() {
   return (
-    <footer className="w-full text-xs flex justify-between items-end p-2 pb-1 bg-gradient-to-r from-green-500 to-green-700 text-white leading-tight">
+    <footer className="w-full text-xs flex justify-between items-end pt-1 pb-1 bg-gradient-to-r from-green-500 to-green-700 text-white leading-tight">
       {/* Left Pane */}
       <div className="flex-grow text-left">
         <Link href="/terms" className="hover:underline text-white font-semibold">
