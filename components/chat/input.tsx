@@ -29,18 +29,15 @@ export default function ChatInput({
   });
 
   return (
-    <div className="w-full">
-      {/* Push content up to prevent overlap */}
-      <div className="pb-24"></div>
+    <>
+      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg text-base">
 
-      {/* Chat Input Container */}
-      <div className="z-10 flex flex-col justify-center items-center fixed bottom-14 w-full p-5 bg-gradient-to-r from-green-500 to-green-700 text-white text-base">
         <div className="max-w-screen-lg w-full">
           <Form {...form}>
             <form
               onSubmit={handleSubmit}
-              className={`flex-0 flex w-full p-2 border rounded-full shadow-sm ${
-                isFocused ? "ring-2 ring-white ring-offset-2" : ""
+              className={`flex-0 flex w-full p-1 border rounded-full shadow-sm ${
+                isFocused ? "ring-2 ring-ring ring-offset-2" : ""
               }`}
             >
               <FormField
@@ -53,7 +50,7 @@ export default function ChatInput({
                         {...field}
                         onChange={handleInputChange}
                         value={input}
-                        className="border-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 bg-transparent text-white"
+                        className="border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent"
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                         placeholder="Type your message here..."
@@ -64,7 +61,7 @@ export default function ChatInput({
               />
               <Button
                 type="submit"
-                className="rounded-full w-10 h-10 p-0 flex items-center justify-center bg-white text-green-700 hover:bg-green-200 transition"
+                className="rounded-full w-10 h-10 p-0 flex items-center justify-center"
                 disabled={input.trim() === "" || isLoading}
               >
                 <ArrowUp className="w-5 h-5" />
@@ -72,12 +69,8 @@ export default function ChatInput({
             </form>
           </Form>
         </div>
-      </div>
-
-      {/* Footer: Now Positioned Below the Input */}
-      <div className="fixed bottom-0 w-full bg-gradient-to-r from-green-600 to-green-800 text-white p-4 text-center">
         <ChatFooter />
       </div>
-    </div>
+    </>
   );
 }
