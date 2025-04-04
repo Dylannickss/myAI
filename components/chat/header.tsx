@@ -17,18 +17,18 @@ export default function ChatHeader({
   clearMessages: () => void;
 }) {
   return (
-    <div className="z-10 flex justify-between items-center fixed top-0 w-full px-4 py-3 bg-gradient-to-l from-green-500 to-green-700 text-white shadow-lg border-b border-green-800">
-      {/* Logo + Text */}
-      <div className="flex items-center gap-2">
+    <div className="z-10 flex justify-between items-center fixed top-0 w-full p-3 bg-gradient-to-l from-green-500 to-green-700 text-white shadow-lg border-b border-green-800">
+      {/* Logo and Title */}
+      <div className="flex items-center gap-2 min-w-0 overflow-hidden">
         <AILogo />
-        <p className="font-semibold text-white text-sm sm:text-base">{CHAT_HEADER}</p>
+        <p className="text-sm sm:text-base truncate">{CHAT_HEADER}</p>
       </div>
 
       {/* Clear Button */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 ml-2">
         <Button
           onClick={clearMessages}
-          className="gap-2 shadow-sm bg-white text-black hover:bg-gray-200"
+          className="gap-2 shadow-sm bg-white text-black hover:bg-gray-200 whitespace-nowrap"
           variant="outline"
           size="sm"
         >
